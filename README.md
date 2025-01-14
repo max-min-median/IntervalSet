@@ -1,5 +1,6 @@
 # __class IntervalSet__
 An IntervalSet class I wrote to assist in solving [AOC 2022 #15](https://adventofcode.com/2022/day/15).
+And revised while solving [AOC 2016 #20](https://adventofcode.com/2016/day/20) :D
 
 ## Installation
 `const IntervalSet = require ('./IntervalSet');`
