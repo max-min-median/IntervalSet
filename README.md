@@ -2,19 +2,19 @@
 An IntervalSet class I wrote to assist in solving [AOC 2022 #15](https://adventofcode.com/2022/day/15).
 
 ## Installation
-`const { Interval, IntervalSet } = require ('./IntervalSet');`
+`const IntervalSet = require ('./IntervalSet');`
 
 ## Interval class
 
 | Method | Description |
 | -----: | ----------- |
-| (static) `parse(string)` | Parses a string (e.g `'(3, 4]'`) into an Interval |
-| `validate()` | Validates an Interval. Returns `null` if invalid |
-| `set(...params)` | Manually set the values of an Interval |
-| `intersect(b)` | Finds the intersection (A∩B) of two Intervals |
-| `union(b)` | Finds the union (A∪B) of two Intervals |
-| `subtract(b)` | Finds the subtraction (A\B) of two Intervals |
-| `equals(b)` | Checks if two Intervals are identical |
+| (static) `parse(str, throws=true)` | Parses a string (e.g `'(3, 4]'`) into an Interval |
+| `isValid()` | Returns `true` if the Interval is valid |
+| `overlap(other)` | Finds the intersection (A∩B) of two Intervals |
+| `merge(other)` | Finds the union (A∪B) of two Intervals |
+| `remove(other)` | Returns an array of 2 Intervals obtained by subtracting `other` from `this` |
+| `equals(other)` | Checks if two Intervals are identical |
+| `toArray()` | Returns an array representation of the Interval |
 | `toString()` | Returns a string representation of the Interval in interval notation |
 | `toInequality()` | Returns a string representation of the Interval as inequalities |
 
@@ -22,6 +22,7 @@ An IntervalSet class I wrote to assist in solving [AOC 2022 #15](https://advento
 
 | Method | Description |
 | -----: | ----------- |
+| `toArray()` | Returns an array representation of the IntervalSet |
 | `union(b)` | Finds the union (A∪B) of two IntervalSets |
 | `intersect(b)` | Finds the intersection (A∩B) of two IntervalSets |
 | `complement()` | Finds the real complement (A') of an IntervalSet |
